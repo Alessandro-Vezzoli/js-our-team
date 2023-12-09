@@ -64,7 +64,6 @@ user.forEach((member) => {
   );
 
   // inserire in html le informazioni di ogni singolo utente
-
   console.log(user);
 
   const div = document.createElement("div");
