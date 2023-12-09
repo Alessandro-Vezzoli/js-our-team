@@ -73,8 +73,13 @@ user.forEach((member) => {
   console.log(div);
 
   const img = document.createElement("img");
-  img.src = "./${member.photo}";
-  img.className = "card-img-top";
+  //Trasformare la stringa foto in una immagine
+  img.src = `./assets/img/${member.photo}`;
+  img.className = "img-thumbnail card-img-top ";
+  img.style.width = "500px";
+  img.style.height = "300px";
+  img.style.objectFit = "cover";
+
   img.alt = "ImgUser";
   console.log(img);
 
