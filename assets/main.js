@@ -19,6 +19,7 @@ Organizzare i singoli membri in card/schede
 */
 
 //array
+//for - forEach
 // DOM
 //String
 
@@ -56,4 +57,9 @@ let user = [
   },
 ];
 
-console.log(user);
+// stampare in console ogni singolo membro del team con relative informazioni
+user.forEach((member) => {
+  console.log(
+    `Nome: ${member.name}, Ruolo: ${member.role}, Foto: ${member.photo}`
+  );
+});
