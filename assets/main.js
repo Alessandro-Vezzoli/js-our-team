@@ -62,4 +62,39 @@ user.forEach((member) => {
   console.log(
     `Nome: ${member.name}, Ruolo: ${member.role}, Foto: ${member.photo}`
   );
+
+  // inserire in html le informazioni di ogni singolo utente
+
+  console.log(user);
+
+  const div = document.createElement("div");
+  div.className = "card m-3";
+  div.style.width = "18rem";
+  console.log(div);
+
+  const img = document.createElement("img");
+  img.src = "./${member.photo}";
+  img.className = "card-img-top";
+  img.alt = "ImgUser";
+  console.log(img);
+
+  const secondDiv = document.createElement("div");
+  secondDiv.className = "card-body";
+  console.log(secondDiv);
+
+  const titleUser = document.createElement("h5");
+  titleUser.className = "card-title text-center";
+  titleUser.textContent = member.name;
+  console.log(titleUser);
+
+  const roleUser = document.createElement("p");
+  roleUser.className = "card-text text-center pb-3";
+  roleUser.textContent = member.role;
+  console.log(roleUser);
+
+  secondDiv.appendChild(titleUser);
+  div.appendChild(img);
+  div.appendChild(secondDiv);
+  div.appendChild(roleUser);
+  document.getElementById("card-container").appendChild(div);
 });
